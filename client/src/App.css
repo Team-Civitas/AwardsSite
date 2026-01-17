@@ -31,6 +31,56 @@
   height: 48px;
 }
 
+/* Navbar user */
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.login-button {
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: #5865f2;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  transition: opacity 0.2s ease;
+}
+
+.login-button:hover {
+  opacity: 0.85;
+}
+
+.logout-button {
+  background: transparent;
+  border: 1px solid #ffffff30;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.2s ease;
+}
+
+.logout-button:hover {
+  background: #ffffff10;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.user-profile img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
 /*Filter bar*/
 
 .filter-bar {
