@@ -91,11 +91,11 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  gap: 0;
 
   max-width: 220px;
-  height: 260px;
+  height: 280px;
 
   position: relative;
   overflow: hidden;
@@ -137,7 +137,7 @@
 }
 
 .badge-card:hover .badge-icon{
-  transform: rotate(720deg);
+  transform: rotate(1440deg);
 }
 
 .badge-card:hover .badge-description {
@@ -148,7 +148,7 @@
   font-size: 32px;
   margin-bottom: 16px;
 
-  transition: transform 0.5s ease;
+  transition: transform 0.7s ease;
 }
 
 .badge-rarity {
@@ -173,14 +173,25 @@
 
 .badge-title {
   margin-top: 4px;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 .badge-description {
+  flex-grow: 1;
+}
+
+.badge-description, .badge-mission{
   font-size: 14px;
   color: var(--main-text-color);
   text-align: center;
   
   transition: ease-in-out 0.2s;
+}
+
+.badge-mission {
+  margin-top: 4px;
+  font-style: italic;
 }
 
 .badge-footer {
@@ -192,11 +203,82 @@
   color: var(--main-text-color);
   padding-top: 32px;
   border-top: 1px solid #e4e6ff13;
-  margin: auto;
+  margin-top: auto;
 }
 
 .badge-category {
   text-transform: uppercase;
+}
+
+/*Rarity card colors static*/
+
+.badge-card.rarity-standard {
+  background: linear-gradient(#0f1016, #050607);
+  border: 1px solid #161616;
+}
+
+.badge-card.rarity-specialiserad {
+  background: linear-gradient(#091b15, #050607);
+  border: 1px solid #094231;
+}
+
+.badge-card.rarity-sällsynt {
+  background: linear-gradient(#0a1920, #050607);
+  border: 1px solid #093b52;
+}
+
+.badge-card.rarity-mästare {
+  background: linear-gradient(#171321, #050607);
+  border: 1px solid #332356;
+}
+
+.badge-card.rarity-legend {
+  background: linear-gradient(#20180b, #050607);
+  border: 1px solid #553909;
+}
+
+/*Rarity card colors hover*/
+
+.badge-card.rarity-standard:hover {
+  box-shadow: 0 10px 30px #161616;
+}
+
+.badge-card.rarity-specialiserad:hover {
+  box-shadow: 0 10px 30px #094231;
+}
+
+.badge-card.rarity-sällsynt:hover {
+  box-shadow: 0 10px 30px #093b52;
+}
+
+.badge-card.rarity-mästare:hover {
+  box-shadow: 0 10px 30px #332356;
+}
+
+.badge-card.rarity-legend:hover {
+  box-shadow: 0 10px 30px #553909;
+}
+
+/*Rarity tag colors*/
+
+.badge-rarity-tag.rarity-standard {
+  color: #9ca3af;
+}
+
+.badge-rarity-tag.rarity-specialiserad {
+  color: #4ddb71;
+}
+
+.badge-rarity-tag.rarity-sällsynt {
+  color: #38bdf8;
+}
+
+.badge-rarity-tag.rarity-mästare {
+  color: #9458cf;
+}
+
+.badge-rarity-tag.rarity-legend {
+  color: #faaa15;
 }
 
 /*Footer*/

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "member",
+    "title": "Team Member",
+    "description": "----------------------",
+    "category": "övrigt",
+    "mission": "Var en del av teamet",
+    "rarity": "standard",
+    "icon": "💎",
+    "status": "Upplåst"
+  },
+  {
+    "id": "create",
+    "title": "Systemstart",
+    "description": "Den industriella början. För de som satte de första kugghjulen i rörelse.",
+    "category": "stories",
+    "mission": "Spelat på Civitas: Create",
+    "rarity": "specialiserad",
+    "icon": "🔧",
+    "status": "Upplåst"
+  },
+  {
+    "id": "arcanum",
+    "title": "Medeltida Mästare",
+    "description": "En era av kungariken och chunk-errors.",
+    "category": "stories",
+    "mission": "Spelade på Civitas: Arcanum",
+    "rarity": "sällsynt",
+    "icon": "👑",
+    "status": "Upplåst"
+  },
+  {
+    "id": "create-revolution",
+    "title": "Industriella Revolutionen",
+    "description": "Genombrottet för tåg och rymdäventyr.",
+    "category": "stories",
+    "mission": "Spelade på Civitas: Create Revolution",
+    "rarity": "mästare",
+    "icon": "⚙️",
+    "status": "Upplåst"
+  },
+  {
+    "id": "re-created",
+    "title": "Imperium av infrastruktur",
+    "description": "En nystart med fokus på förfinade system och tågnätverk.",
+    "category": "stories",
+    "mission": "Spelade på Civitas: Re-Created",
+    "rarity": "legend",
+    "icon": "🏗️",
+    "status": "Upplåst"
+  },
+  {
+    "id": "endurance",
+    "title": "Civitas: Survival Mode",
+    "description": "Efter drama kommer tornados!",
+    "category": "stories",
+    "mission": "Spelade på Civitas: Endurance",
+    "rarity": "specialiserad",
+    "icon": "🍃",
+    "status": "Upplåst"
+  },
+  {
+    "id": "spellbound",
+    "title": "Trollbunden",
+    "description": "Drakar och demoner!",
+    "category": "originals",
+    "mission": "Spelade på Civitas: Spellbound",
+    "rarity": "sällsynt",
+    "icon": "🔮",
+    "status": "Upplåst"
+  }
+]

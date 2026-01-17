@@ -1,17 +1,18 @@
 import '../../App.css'
 
-export default function BadgeCard() {
+export default function BadgeCard( { badge }) {
     return (
-        <div className="badge-card">
-            <div className="badge-icon">💎</div>
+        <div className={`badge-card rarity-${badge.rarity}`}>
+            <div className="badge-icon">{badge.icon}</div>
             <div className="badge-rarity">
-                <div className="badge-rarity-tag">Standard</div>
+                <div className={`badge-rarity-tag rarity-${badge.rarity}`}>{badge.rarity}</div>
             </div>
-            <h3 className="badge-title">Team Member</h3>
-            <p className="badge-description">Du är medlem i Team Civitas. Grattis!</p>
+            <h3 className="badge-title">{badge.title}</h3>
+            <p className="badge-description">{badge.description}</p>
+            <p className="badge-mission">{badge.mission}</p>
             <div className="badge-footer">
-                <span className="badge-category">Övrigt</span>
-                <span>Upplåst</span>
+                <span className="badge-category">{badge.category}</span>
+                <span>{badge.status}</span>
             </div>
         </div>
     )
