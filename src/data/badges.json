@@ -3,11 +3,11 @@
     "id": "member",
     "title": "Team Member",
     "description": "----------------------",
-    "category": "övrigt",
+    "category": "other",
     "mission": "Var en del av teamet",
     "rarity": "standard",
     "icon": "💎",
-    "status": "Upplåst"
+    "status": "locked"
   },
   {
     "id": "create",
@@ -17,7 +17,7 @@
     "mission": "Spelat på Civitas: Create",
     "rarity": "specialiserad",
     "icon": "🔧",
-    "status": "Upplåst"
+    "status": "locked"
   },
   {
     "id": "arcanum",
@@ -27,7 +27,7 @@
     "mission": "Spelade på Civitas: Arcanum",
     "rarity": "sällsynt",
     "icon": "👑",
-    "status": "Upplåst"
+    "status": "unlocked"
   },
   {
     "id": "create-revolution",
@@ -37,7 +37,7 @@
     "mission": "Spelade på Civitas: Create Revolution",
     "rarity": "mästare",
     "icon": "⚙️",
-    "status": "Upplåst"
+    "status": "unlocked"
   },
   {
     "id": "re-created",
@@ -47,7 +47,7 @@
     "mission": "Spelade på Civitas: Re-Created",
     "rarity": "legend",
     "icon": "🏗️",
-    "status": "Upplåst"
+    "status": "unlocked"
   },
   {
     "id": "endurance",
@@ -57,7 +57,7 @@
     "mission": "Spelade på Civitas: Endurance",
     "rarity": "specialiserad",
     "icon": "🍃",
-    "status": "Upplåst"
+    "status": "unlocked"
   },
   {
     "id": "spellbound",
@@ -67,6 +67,6 @@
     "mission": "Spelade på Civitas: Spellbound",
     "rarity": "sällsynt",
     "icon": "🔮",
-    "status": "Upplåst"
+    "status": "unlocked"
   }
 ]
