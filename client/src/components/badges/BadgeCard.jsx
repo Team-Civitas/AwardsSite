@@ -6,8 +6,8 @@ const STATUS_LABELS = {
 }
 
 const CATEGORY_LABELS = {
-    stories: "Civitas Stories",
-    originals: "Civitas Originals",
+    modpack: "Modpack",
+    core: "Core",
     other: "Övrigt"
 }
 

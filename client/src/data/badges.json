@@ -2,35 +2,170 @@
   {
     "id": "member",
     "title": "Team Member",
-    "description": "----------------------",
-    "category": "other",
-    "mission": "Var en del av teamet",
+    "description": "En del av kärnan. Civitas börjar här.",
+    "category": "core",
+    "mission": "Medlem i Team Civitas",
     "rarity": "standard",
-    "icon": "💎"
+    "icon": "🛡️"
+  },
+  {
+    "id": "veteran",
+    "title": "Veteran",
+    "description": "Ett bevis på långvarig lojalitet och historia.",
+    "category": "core",
+    "mission": "Medlem i Team Civitas mellan 2020-2025",
+    "rarity": "sällsynt",
+    "icon": "🎖️"
+  },
+  {
+    "id": "beyond-create",
+    "title": "Bortom Create",
+    "description": "Du spelar modpacks som om det vore lösgodis!",
+    "category": "core",
+    "mission": "Deltagit i ett Civitas-modpack som inte är centrerat runt Create-modden",
+    "rarity": "sällsynt",
+    "icon": "🍬"
+  },
+  {
+    "id": "loyal",
+    "title": "Lojal medborgare",
+    "description": "Har följt Civitas genom flera epoker.",
+    "category": "core",
+    "mission": "Deltagit i minst 3 olika Civitas-modpacks",
+    "rarity": "sällsynt",
+    "icon": "🤝"
+  },
+  {
+    "id": "owl",
+    "title": "Nattuggla",
+    "description": "När andra loggar ut, fortsätter du.",
+    "category": "other",
+    "mission": "Spelat mycket under natten",
+    "rarity": "standard",
+    "icon": "🦉"
+  },
+  {
+    "id": "superstar",
+    "title": "Pop-stjärna",
+    "description": "Alltid där när det händer.",
+    "category": "core",
+    "mission": "Deltagit i minst ett Civitas-event",
+    "rarity": "standard",
+    "icon": "🌟"
+  },
+  {
+    "id": "train-driver",
+    "title": "Lokförare",
+    "description": "Förseningar på grund av signalfel.",
+    "category": "other",
+    "mission": "Varit aktiv som medpart i en Civitas-servers tågnätverk genom att bygga automatiska tåg eller räls",
+    "rarity": "specialiserad",
+    "icon": "🚆"
+  },
+  {
+    "id": "early-bird",
+    "title": "Early Bird",
+    "description": "På plats innan världen ens hunnit vakna.",
+    "category": "other",
+    "mission": "Var med från dag 1 i ett modpack",
+    "rarity": "sällsynt",
+    "icon": "🐦"
+  },
+  {
+    "id": "collerctor-1",
+    "title": "Samlare I",
+    "description": "Början på en imponerande samling.",
+    "category": "other",
+    "mission": "Låst upp 5 badges på Civitas Awards",
+    "rarity": "standard",
+    "icon": "📦"
+  },
+  {
+    "id": "collerctor-2",
+    "title": "Samlare II",
+    "description": "Allt fler bevis på engagemang.",
+    "category": "other",
+    "mission": "Låst upp 10 badges på Civitas Awards",
+    "rarity": "specialiserad",
+    "icon": "📦"
+  },
+  {
+    "id": "collerctor-3",
+    "title": "Samlare III",
+    "description": "En samling som börjar tala för sig själv.",
+    "category": "other",
+    "mission": "Låst upp 15 badges på Civitas Awards",
+    "rarity": "sällsynt",
+    "icon": "🏆"
+  },
+  {
+    "id": "collerctor-4",
+    "title": "Samlare IV",
+    "description": "Nästan fulländad.",
+    "category": "other",
+    "mission": "Låst upp 20 badges på Civitas Awards",
+    "rarity": "mästare",
+    "icon": "🏆"
+  },
+  {
+    "id": "collerctor-5",
+    "title": "Samlare V",
+    "description": "En sann Civitas-ikon.",
+    "category": "other",
+    "mission": "Låst upp 30 badges på Civitas Awards",
+    "rarity": "legend",
+    "icon": "👑"
+  },
+  {
+    "id": "all-rarities",
+    "title": "Allsmäktig",
+    "description": "Har bemästrat hela spektrumet.",
+    "category": "other",
+    "mission": "Låst upp minst en badge på Civitas Awards från varje raritet",
+    "rarity": "legend",
+    "icon": "✨"
+  },
+  {
+    "id": "debug",
+    "title": "De' bug",
+    "description": "Hittar problem innan de blir katastrofer.",
+    "category": "other",
+    "mission": "Hittat buggar & problem i minst ett Civitasprojekt",
+    "rarity": "specialiserad",
+    "icon": "🐞"
+  },
+  {
+    "id": "project-helper",
+    "title": "Projektbiträde",
+    "description": "En hjälpande hand bakom kulisserna.",
+    "category": "other",
+    "mission": "Bidragit till projekt/modpack",
+    "rarity": "specialiserad",
+    "icon": "🛠️"
   },
   {
     "id": "create",
     "title": "Systemstart",
     "description": "Den industriella början. För de som satte de första kugghjulen i rörelse.",
-    "category": "stories",
+    "category": "modpack",
     "mission": "Spelat på Civitas: Create",
     "rarity": "specialiserad",
-    "icon": "🔧"
+    "icon": "🔩"
   },
   {
     "id": "arcanum",
     "title": "Medeltida Mästare",
     "description": "En era av kungariken och chunk-errors.",
-    "category": "stories",
+    "category": "modpack",
     "mission": "Spelade på Civitas: Arcanum",
     "rarity": "sällsynt",
-    "icon": "👑"
+    "icon": "🏰"
   },
   {
     "id": "create-revolution",
     "title": "Industriella Revolutionen",
-    "description": "Genombrottet för tåg och rymdäventyr.",
-    "category": "stories",
+    "description": "Genombrottet för tåg och teknisk dominans.",
+    "category": "modpack",
     "mission": "Spelade på Civitas: Create Revolution",
     "rarity": "mästare",
     "icon": "⚙️"
@@ -39,7 +174,7 @@
     "id": "re-created",
     "title": "Imperium av infrastruktur",
     "description": "En nystart med fokus på förfinade system och tågnätverk.",
-    "category": "stories",
+    "category": "modpack",
     "mission": "Spelade på Civitas: Re-Created",
     "rarity": "legend",
     "icon": "🏗️"
@@ -48,18 +183,63 @@
     "id": "endurance",
     "title": "Civitas: Survival Mode",
     "description": "Efter drama kommer tornados!",
-    "category": "stories",
+    "category": "modpack",
     "mission": "Spelade på Civitas: Endurance",
     "rarity": "specialiserad",
-    "icon": "🍃"
+    "icon": "🌪️"
   },
   {
     "id": "spellbound",
     "title": "Trollbunden",
     "description": "Drakar och demoner!",
-    "category": "originals",
+    "category": "modpack",
     "mission": "Spelade på Civitas: Spellbound",
     "rarity": "sällsynt",
-    "icon": "🔮"
+    "icon": "🐉"
+  },
+  {
+    "id": "create-horizons",
+    "title": "Mot horisonten",
+    "description": "När tekniken tog sikte mot något större.",
+    "category": "modpack",
+    "mission": "Spelade på Civitas: Create Horizons",
+    "rarity": "mästare",
+    "icon": "🌅"
+  },
+  {
+    "id": "synergy",
+    "title": "Synergi",
+    "description": "När samarbetet blev starkare än systemen.",
+    "category": "modpack",
+    "mission": "Spelade på Civitas: Synergy",
+    "rarity": "sällsynt",
+    "icon": "🔗"
+  },
+  {
+    "id": "overdrive",
+    "title": "Övervarv",
+    "description": "Allt gick snabbare. Ibland för snabbt.",
+    "category": "modpack",
+    "mission": "Spelade på Civitas: Overdrive",
+    "rarity": "specialiserad",
+    "icon": "🔥"
+  },
+  {
+    "id": "back-on-track",
+    "title": "Tillbaka på spåret",
+    "description": "En nystart byggd på räls, rutiner och framtidstro.",
+    "category": "modpack",
+    "mission": "Spelade på Civitas: Back on Track",
+    "rarity": "legend",
+    "icon": "🛤️"
+  },
+  {
+    "id": "pokemon-ascension",
+    "title": "Uppstigning",
+    "description": "När legender väcktes och resan tog en ny form.",
+    "category": "modpack",
+    "mission": "Spelade på Civitas: Pokémon Ascension",
+    "rarity": "legend",
+    "icon": "⚡"
   }
 ]

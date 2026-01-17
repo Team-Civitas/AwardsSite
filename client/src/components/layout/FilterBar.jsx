@@ -8,11 +8,11 @@ export default function FilterBar({ activeCategory, onCategoryChange }) {
                     className={activeCategory === "all" ? "active" : ""}
                     onClick={() => onCategoryChange("all")}>Alla kategorier</button>
                 <button
-                    className={activeCategory === "stories" ? "active" : ""}
-                    onClick={() => onCategoryChange("stories")}>Civitas Stories</button>
+                    className={activeCategory === "core" ? "active" : ""}
+                    onClick={() => onCategoryChange("core")}>Core</button>
                 <button
-                    className={activeCategory === "originals" ? "active" : ""}
-                    onClick={() => onCategoryChange("originals")}>Civitas Originals</button>
+                    className={activeCategory === "modpack" ? "active" : ""}
+                    onClick={() => onCategoryChange("modpack")}>Modpack</button>
                 <button
                     className={activeCategory === "other" ? "active" : ""}
                     onClick={() => onCategoryChange("other")}>Övrigt</button>
