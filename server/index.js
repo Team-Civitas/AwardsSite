@@ -12,15 +12,17 @@ const app = express()
 app.set("trust proxy", 1)
 
 app.use(
-    session({
-        secret: process.env.SESSION_SECRET || "dev-secret-change-later",
-        resave: false,
-        saveUninitialized: false,
-        cookie: {
-            secure: process.env.NODE_ENV === "production",
-            sameSite: "lax"
-        }
-    })
+  session({
+    name: "civitas.sid",
+    secret: process.env.SESSION_SECRET || "dev-secret-change-later",
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      secure: true,
+      httpOnly: true,
+      sameSite: "lax"
+    }
+  })
 )
 
 app.use(
