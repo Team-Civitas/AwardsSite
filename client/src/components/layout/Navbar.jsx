@@ -2,7 +2,7 @@ import civitasLogo from '../../assets/team_civitas.svg'
 import '../../App.css'
 
 function handleLogout() {
-    fetch("http://localhost:3000/api/logout", {
+    fetch("https://awards.teamcivitas.net/api/logout", {
         method: "POST",
         credentials: "include"
     }).then(() => {
@@ -25,7 +25,7 @@ export default function Navbar({ user }) {
                 {!user && (
                     <a
                         className="login-button"
-                        href="/auth/discord"
+                        href="https://awards.teamcivitas.net/auth/discord"
                     >
                         Logga in
                     </a>

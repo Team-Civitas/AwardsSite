@@ -10,7 +10,7 @@ function App() {
   const [user, setUser] = useState(null)
 
   useEffect(() => {
-  fetch("http://localhost:3000/api/me", {
+  fetch("https://awards.teamcivitas.net/api/me", {
     credentials: "include"
   })
     .then(res => res.json())
