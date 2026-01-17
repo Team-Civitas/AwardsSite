@@ -1,6 +1,6 @@
 import '../../App.css'
 
-import BadgeCard from "../../components/badges/BadgeCard"
+import BadgeCard from "./BadgeCard"
 
 export default function BadgeGrid() {
     return (
