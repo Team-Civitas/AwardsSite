@@ -29,7 +29,7 @@ function App() {
           onCategoryChange={setActiveCategory}
         />
 
-        <BadgeGrid activeCategory={activeCategory} />
+        <BadgeGrid user={user} activeCategory={activeCategory} />
       </main>
 
       <Footer />

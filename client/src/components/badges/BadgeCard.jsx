@@ -1,8 +1,8 @@
 import '../../App.css'
 
 const STATUS_LABELS = {
-  locked: "EJ UPPLÅST",
-  unlocked: "UPPLÅST"
+    locked: "EJ UPPLÅST",
+    unlocked: "UPPLÅST"
 }
 
 const CATEGORY_LABELS = {
@@ -11,9 +11,9 @@ const CATEGORY_LABELS = {
     other: "Övrigt"
 }
 
-export default function BadgeCard( { badge }) {
+export default function BadgeCard({ badge, unlocked }) {
     return (
-        <div className={`badge-card rarity-${badge.rarity} status-${badge.status}`}>
+        <div className={`badge-card rarity-${badge.rarity} ${unlocked ? "unlocked" : "locked"}`}>
             <div className="badge-icon">{badge.icon}</div>
             <div className="badge-rarity">
                 <div className={`badge-rarity-tag rarity-${badge.rarity}`}>{badge.rarity}</div>
@@ -23,7 +23,7 @@ export default function BadgeCard( { badge }) {
             <p className="badge-mission">{badge.mission}</p>
             <div className="badge-footer">
                 <span className="badge-category">{CATEGORY_LABELS[badge.category]}</span>
-                <span>{STATUS_LABELS[badge.status]}</span>
+                <span>{unlocked ? "Upplåst" : "Ej Upplåst"}</span>
             </div>
         </div>
     )

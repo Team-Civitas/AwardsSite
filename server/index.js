@@ -3,6 +3,8 @@ import fetch from "node-fetch"
 import dotenv from "dotenv"
 import session from "express-session"
 import cors from "cors"
+import fs from "fs"
+import path from "path"
 
 dotenv.config()
 
@@ -17,11 +19,22 @@ app.use(
 )
 
 app.use(
-  cors({
-    origin: "http://localhost:5173",
-    credentials: true
-  })
+    cors({
+        origin: "http://localhost:5173",
+        credentials: true
+    })
 )
+
+// User storage (JSON)
+const USERS_FILE = path.resolve("data/users.json")
+
+function loadUsers() {
+    if (!fs.existsSync(USERS_FILE)) {
+        return {}
+    }
+
+    return JSON.parse(fs.readFileSync(USERS_FILE, "utf8"))
+}
 
 const {
     DISCORD_CLIENT_ID,
@@ -102,7 +115,13 @@ app.get("/auth/discord/callback", async (req, res) => {
 
         const user = await userResponse.json()
 
-        req.session.user = user
+        const users = loadUsers()
+        const storedUser = users[user.id]
+
+        req.session.user = {
+            ...user,
+            badges: storedUser?.badges || []
+        }
 
         console.log("✅ Discord user:", user)
 
