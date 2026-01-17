@@ -72,7 +72,7 @@
     "icon": "🐦"
   },
   {
-    "id": "collerctor-1",
+    "id": "collector-1",
     "title": "Samlare I",
     "description": "Början på en imponerande samling.",
     "category": "other",
@@ -81,7 +81,7 @@
     "icon": "📦"
   },
   {
-    "id": "collerctor-2",
+    "id": "collector-2",
     "title": "Samlare II",
     "description": "Allt fler bevis på engagemang.",
     "category": "other",
@@ -90,7 +90,7 @@
     "icon": "📦"
   },
   {
-    "id": "collerctor-3",
+    "id": "collector-3",
     "title": "Samlare III",
     "description": "En samling som börjar tala för sig själv.",
     "category": "other",
@@ -99,7 +99,7 @@
     "icon": "🏆"
   },
   {
-    "id": "collerctor-4",
+    "id": "collector-4",
     "title": "Samlare IV",
     "description": "Nästan fulländad.",
     "category": "other",
@@ -108,7 +108,7 @@
     "icon": "🏆"
   },
   {
-    "id": "collerctor-5",
+    "id": "collector-5",
     "title": "Samlare V",
     "description": "En sann Civitas-ikon.",
     "category": "other",
@@ -217,7 +217,7 @@
   },
   {
     "id": "overdrive",
-    "title": "Övervarv",
+    "title": "Helt överstyr!",
     "description": "Allt gick snabbare. Ibland för snabbt.",
     "category": "modpack",
     "mission": "Spelade på Civitas: Overdrive",
@@ -226,7 +226,7 @@
   },
   {
     "id": "back-on-track",
-    "title": "Tillbaka på spåret",
+    "title": "Tillbaka till Create",
     "description": "En nystart byggd på räls, rutiner och framtidstro.",
     "category": "modpack",
     "mission": "Spelade på Civitas: Back on Track",
