@@ -10,21 +10,19 @@ function App() {
   const [user, setUser] = useState(null)
 
   useEffect(() => {
-  fetch("/api/me", {
-  credentials: "include"
-})
-    .then(res => res.json())
-    .then(data => {
-      setUser(data)
+    fetch("/api/me", {
+      credentials: "include"
     })
-}, [])
+      .then(res => res.json())
+      .then(data => setUser(data))
+  }, [])
 
   return (
     <div className="app">
       <Navbar user={user} />
 
       <main className="page">
-        <FilterBar 
+        <FilterBar
           activeCategory={activeCategory}
           onCategoryChange={setActiveCategory}
         />
