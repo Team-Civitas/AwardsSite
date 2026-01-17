@@ -9,18 +9,26 @@ import path from "path"
 dotenv.config()
 
 const app = express()
+app.set("trust proxy", 1)
 
 app.use(
     session({
-        secret: "dev-secret-change-later",
+        secret: process.env.SESSION_SECRET || "dev-secret-change-later",
         resave: false,
-        saveUninitialized: false
+        saveUninitialized: false,
+        cookie: {
+            secure: process.env.NODE_ENV === "production",
+            sameSite: "lax"
+        }
     })
 )
 
 app.use(
     cors({
-        origin: "http://localhost:5173",
+        origin:
+            process.env.NODE_ENV === "production"
+                ? "https://awards.teamcivitas.net"
+                : "http://localhost:5173",
         credentials: true
     })
 )
@@ -125,8 +133,9 @@ app.get("/auth/discord/callback", async (req, res) => {
 
         console.log("✅ Discord user:", user)
 
-        // Skicka tillbaka användaren till frontend istället
-        res.redirect("http://localhost:5173")
+        // res.redirect("http://localhost:5173")
+        res.redirect(process.env.FRONTEND_URL || "/")
+
 
     } catch (err) {
         console.error(err)
@@ -144,5 +153,5 @@ app.post("/api/logout", (req, res) => {
 })
 
 app.listen(3000, () => {
-    console.log("🚀 Server running on http://localhost:3000")
+    console.log("🚀 Server running")
 })
