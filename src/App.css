@@ -71,6 +71,11 @@
   color: #fff;
 }
 
+.filter-tabs button.active {
+  background: #27262c;
+  color: #fff;
+}
+
 /*Badge Grid*/
 
 .badge-grid {
