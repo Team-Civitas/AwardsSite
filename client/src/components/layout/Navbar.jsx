@@ -25,7 +25,7 @@ export default function Navbar({ user }) {
                 {!user && (
                     <a
                         className="login-button"
-                        href="http://localhost:3000/auth/discord"
+                        href="/auth/discord"
                     >
                         Logga in
                     </a>
