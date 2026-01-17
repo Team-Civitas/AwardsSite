@@ -10,9 +10,9 @@ function App() {
   const [user, setUser] = useState(null)
 
   useEffect(() => {
-  fetch("https://awards.teamcivitas.net/api/me", {
-    credentials: "include"
-  })
+  fetch("/api/me", {
+  credentials: "include"
+})
     .then(res => res.json())
     .then(data => {
       setUser(data)
