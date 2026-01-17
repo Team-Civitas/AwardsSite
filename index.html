@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civitas Awards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Civitas Awards</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="#nominees">Nominees</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Civitas Awards</h1>
+                <p>Celebrating Excellence and Achievement</p>
+                <button id="learnMoreBtn" class="cta-button">Learn More</button>
+            </div>
+        </section>
+
+        <section id="awards" class="awards-section">
+            <h2>Award Categories</h2>
+            <div class="awards-grid">
+                <div class="award-card">
+                    <h3>Innovation Award</h3>
+                    <p>Recognizing groundbreaking ideas and creative solutions</p>
+                </div>
+                <div class="award-card">
+                    <h3>Leadership Award</h3>
+                    <p>Honoring exceptional leadership and vision</p>
+                </div>
+                <div class="award-card">
+                    <h3>Community Impact Award</h3>
+                    <p>Celebrating contributions to community development</p>
+                </div>
+                <div class="award-card">
+                    <h3>Excellence Award</h3>
+                    <p>Acknowledging outstanding performance and dedication</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="nominees" class="nominees-section">
+            <h2>Featured Nominees</h2>
+            <div class="nominees-container">
+                <div class="nominee-card">
+                    <div class="nominee-name">Nominee 1</div>
+                    <p class="nominee-category">Innovation Award</p>
+                </div>
+                <div class="nominee-card">
+                    <div class="nominee-name">Nominee 2</div>
+                    <p class="nominee-category">Leadership Award</p>
+                </div>
+                <div class="nominee-card">
+                    <div class="nominee-name">Nominee 3</div>
+                    <p class="nominee-category">Community Impact Award</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Get In Touch</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+            <div id="formMessage"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Team Civitas. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
