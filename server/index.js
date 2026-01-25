@@ -2,9 +2,9 @@ import express from "express";
 import dotenv from "dotenv";
 import session from "express-session";
 import cors from "cors";
-import path from "path";
 import "./db.js";
 import db from "./db.js";
+import adminRoutes from "./routes/admin.js";
 
 dotenv.config();
 
@@ -54,12 +54,14 @@ app.use(
       if (allowedOrigins.includes(origin)) {
         return callback(null, true);
       }
-      console.warn("❌ Blocked CORS origin:", origin);
+      console.warn("? Blocked CORS origin:", origin);
       return callback(new Error("Not allowed by CORS"));
     },
     credentials: true
   })
 );
+
+app.use(express.json());
 
 /**
  * --------------------
@@ -74,7 +76,7 @@ const {
 } = process.env;
 
 if (!DISCORD_CLIENT_ID || !DISCORD_CLIENT_SECRET || !DISCORD_REDIRECT_URI) {
-  console.error("❌ Missing Discord env variables");
+  console.error("? Missing Discord env variables");
   process.exit(1);
 }
 
@@ -103,10 +105,9 @@ app.get("/auth/discord", (req, res) => {
  */
 app.get("/auth/discord/callback", async (req, res) => {
   const code = req.query.code;
-  if (!code) return res.status(400).send("❌ No code provided");
+  if (!code) return res.status(400).send("? No code provided");
 
   try {
-    // Exchange code for token
     const tokenResponse = await fetch(
       "https://discord.com/api/oauth2/token",
       {
@@ -124,12 +125,12 @@ app.get("/auth/discord/callback", async (req, res) => {
 
     const tokenData = await tokenResponse.json();
     const accessToken = tokenData.access_token;
+
     if (!accessToken) {
-      console.error("❌ Token error:", tokenData);
+      console.error("? Token error:", tokenData);
       return res.status(500).send("Failed to get access token");
     }
 
-    // Fetch Discord user
     const userResponse = await fetch(
       "https://discord.com/api/users/@me",
       {
@@ -139,21 +140,13 @@ app.get("/auth/discord/callback", async (req, res) => {
 
     const user = await userResponse.json();
 
-    /**
-     * --------------------
-     * SQLite: ensure user exists
-     * --------------------
-     */
+    // Ensure user exists
     db.prepare(`
       INSERT OR IGNORE INTO users (id, name)
       VALUES (?, ?)
     `).run(user.id, user.username);
 
-    /**
-     * --------------------
-     * SQLite: fetch badges
-     * --------------------
-     */
+    // Fetch badges live from DB
     const badges = db.prepare(`
       SELECT b.id
       FROM user_badges ub
@@ -161,7 +154,6 @@ app.get("/auth/discord/callback", async (req, res) => {
       WHERE ub.user_id = ?
     `).all(user.id).map(r => r.id);
 
-    // Save session
     req.session.user = {
       id: user.id,
       username: user.username,
@@ -169,10 +161,10 @@ app.get("/auth/discord/callback", async (req, res) => {
       badges
     };
 
-    console.log("✅ Logged in:", user.username);
+    console.log("? Logged in:", user.username);
     res.redirect(FRONTEND_URL || "/");
   } catch (err) {
-    console.error("❌ OAuth error:", err);
+    console.error("? OAuth error:", err);
     res.status(500).send("OAuth error");
   }
 });
@@ -183,7 +175,21 @@ app.get("/auth/discord/callback", async (req, res) => {
  * --------------------
  */
 app.get("/api/me", (req, res) => {
-  res.json(req.session.user || null);
+  if (!req.session.user) {
+    return res.json(null);
+  }
+
+  const badges = db.prepare(`
+    SELECT b.id
+    FROM user_badges ub
+    JOIN badges b ON b.id = ub.badge_id
+    WHERE ub.user_id = ?
+  `).all(req.session.user.id).map(r => r.id);
+
+  res.json({
+    ...req.session.user,
+    badges
+  });
 });
 
 app.post("/api/logout", (req, res) => {
@@ -192,11 +198,13 @@ app.post("/api/logout", (req, res) => {
   });
 });
 
+app.use("/api/admin", adminRoutes);
+
 /**
  * --------------------
  * Start server
  * --------------------
  */
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT} (${NODE_ENV})`);
+  console.log(`?? Server running on port ${PORT} (${NODE_ENV})`);
 });
