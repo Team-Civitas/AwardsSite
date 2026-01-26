@@ -28,4 +28,12 @@ db.exec(`
   );
 `);
 
+// Safe migration: add avatar column if missing
+const columns = db.prepare(`PRAGMA table_info(users)`).all();
+const hasAvatar = columns.some(col => col.name === "avatar");
+
+if (!hasAvatar) {
+  db.exec(`ALTER TABLE users ADD COLUMN avatar TEXT`);
+}
+
 export default db;

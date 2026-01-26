@@ -142,9 +142,13 @@ app.get("/auth/discord/callback", async (req, res) => {
 
     // Ensure user exists
     db.prepare(`
-      INSERT OR IGNORE INTO users (id, name)
-      VALUES (?, ?)
-    `).run(user.id, user.username);
+  INSERT INTO users (id, name, avatar)
+  VALUES (?, ?, ?)
+  ON CONFLICT(id) DO UPDATE SET
+    name = excluded.name,
+    avatar = excluded.avatar
+`).run(user.id, user.username, user.avatar);
+
 
     // Fetch badges live from DB
     const badges = db.prepare(`

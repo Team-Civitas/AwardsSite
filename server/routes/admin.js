@@ -10,7 +10,7 @@ const router = express.Router();
  */
 router.get("/users", adminOnly, (req, res) => {
   const users = db.prepare(`
-    SELECT id, name
+    SELECT id, name, avatar
     FROM users
     ORDER BY name COLLATE NOCASE
   `).all();
@@ -24,6 +24,7 @@ router.get("/users", adminOnly, (req, res) => {
   const result = users.map(user => ({
     id: user.id,
     name: user.name,
+    avatar: user.avatar,
     badges: getBadgesForUser
       .all(user.id)
       .map(row => row.badge_id)
@@ -87,6 +88,20 @@ router.post("/revoke-badge", adminOnly, (req, res) => {
   `).run(userId, badgeId);
 
   res.json({ success: true });
+});
+
+/**
+ * GET /api/admin/badges
+ * Returnerar alla badges
+ */
+router.get("/badges", adminOnly, (req, res) => {
+  const badges = db.prepare(`
+    SELECT id, name, rarity
+    FROM badges
+    ORDER BY id
+  `).all();
+
+  res.json(badges);
 });
 
 export default router;
