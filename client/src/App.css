@@ -56,10 +56,18 @@
 .navbar-name {
   font-family: "Cinzel", system-ui, sans-serif;
   font-size: 1.8em;
+  user-select: none;
 }
 
 .navbar-sub img {
   height: 48px;
+}
+
+.navbar-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
 }
 
 /* Navbar user */
@@ -183,7 +191,7 @@
 }
 
 .filter-tabs button.active {
-  background: #27262c;
+  background: #37344d;
   color: #fff;
 }
 
@@ -223,9 +231,7 @@
 }
 
 .badge-card.locked {
-  opacity: 0.4;
-  filter: grayscale(100%);
-  filter:brightness(50%);
+  filter: brightness(25%);
   pointer-events: none;
 }
 

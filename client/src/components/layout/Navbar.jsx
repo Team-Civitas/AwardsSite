@@ -14,8 +14,15 @@ export default function Navbar({ user }) {
     return (
         <div className="navbar">
             <div className="navbar-sub">
-                <img src={civitasLogo} alt="Logotype" />
-                <p className="navbar-name">Civitas Awards</p>
+                <a href="/">
+                    <img src={civitasLogo} alt="Logotype" />
+                </a>
+                <div className="navbar-heading">
+                    <svg width="24" height="24" fill="#fff"><path d="M13.08 8.63 12 6.44l-1.08 2.19-2.42.35 1.75 1.71-.41 2.41L12 11.96l2.16 1.14-.41-2.41 1.75-1.71z"></path><path d="M17.16 3.01A2.02 2.02 0 0 0 15.42 2H8.58c-.72 0-1.38.39-1.74 1.01l-3.43 6c-.35.61-.35 1.37 0 1.98l3.43 6c.04.08.1.14.16.2v3.8c0 .35.18.67.47.85s.66.2.97.04l3.55-1.78 3.55 1.78a.997.997 0 0 0 1.45-.89v-3.8c.05-.07.11-.13.16-.2l3.43-6c.35-.61.35-1.37 0-1.98l-3.43-6ZM15.42 16H8.58l-3.43-6 3.43-6V3v1h6.84l3.43 6z"></path></svg>
+                    <p className="navbar-name">Civitas Awards</p>
+                    <svg width="24" height="24" fill="#fff"><path d="M13.08 8.63 12 6.44l-1.08 2.19-2.42.35 1.75 1.71-.41 2.41L12 11.96l2.16 1.14-.41-2.41 1.75-1.71z"></path><path d="M17.16 3.01A2.02 2.02 0 0 0 15.42 2H8.58c-.72 0-1.38.39-1.74 1.01l-3.43 6c-.35.61-.35 1.37 0 1.98l3.43 6c.04.08.1.14.16.2v3.8c0 .35.18.67.47.85s.66.2.97.04l3.55-1.78 3.55 1.78a.997.997 0 0 0 1.45-.89v-3.8c.05-.07.11-.13.16-.2l3.43-6c.35-.61.35-1.37 0-1.98l-3.43-6ZM15.42 16H8.58l-3.43-6 3.43-6V3v1h6.84l3.43 6z"></path></svg>
+
+                </div>
             </div>
 
             <div className="navbar-user">
