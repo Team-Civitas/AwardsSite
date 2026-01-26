@@ -7,9 +7,10 @@
 }
 
 body {
-  background-color: #0d0d11;
+  background-color: #050506;
   color: #fff;
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .page {

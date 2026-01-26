@@ -22,6 +22,8 @@ function App() {
 
   return (
   <div className="app">
+    <div className="background-blur-1"></div>
+    <div className="background-blur-2"></div>
     <Navbar user={user} />
 
     <main className="page">
