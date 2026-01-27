@@ -21,11 +21,11 @@ export default function FilterOptions({ activeCategory, onCategoryChange, badgeS
                 </div>
             </div>
             <input
+                className="filter-search-bar"
                 type="text"
                 placeholder="Sök på en badge..."
                 value={badgeSearch}
                 onChange={e => setBadgeSearch(e.target.value)}
-                style={{ marginTop: 8, marginBottom: 8, padding: 6, width: 240 }}
             />
         </div>
     )

@@ -155,33 +155,36 @@
 .filter-options {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
 }
 
-.filter-bar {
-  background-color: var(--tiny-hightlight);
-  border-radius: 1rem;
-  border: 1px solid var(--tiny-hightlight);
-  width: max-content;
+.filter-search-bar, .filter-bar {
   margin-top: 32px;
-  padding: 5px;
-}
-
-.filter-tabs{
+  background-color: var(--tiny-hightlight);
+  border: 1px solid var(--tiny-hightlight);
+  border-radius: 50vw;
+  height: 40px;
+  padding: 8px;
   display: flex;
   align-items: center;
+  box-sizing: border-box;
+}
+
+.filter-search-bar {
+  width: 300px;
+  color: #fff;
 }
 
 .filter-tabs button {
   background-color: #00000000;
-  border-radius: 1rem;
+  border-radius: 50vw;
   color: var(--main-text-color);
   border: none;
-  padding: 8px;
   text-transform: uppercase;
   font-family:'Open Sans', sans-serif;
   font-size: 0.7em;
   font-weight: bold;
+  padding: 8px;
 
   transition: ease-in-out 0.2s;
 }
