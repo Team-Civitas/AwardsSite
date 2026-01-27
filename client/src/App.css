@@ -152,6 +152,12 @@
 
 /*Filter bar*/
 
+.filter-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
 .filter-bar {
   background-color: var(--tiny-hightlight);
   border-radius: 1rem;

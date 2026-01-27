@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react"
 
 import Navbar from "./components/layout/Navbar"
-import FilterBar from "./components/layout/FilterBar"
+import FilterOptions from "./components/layout/FilterOptions"
 import BadgeGrid from "./components/badges/BadgeGrid"
 import Footer from "./components/layout/Footer"
 
@@ -10,6 +10,7 @@ import AdminPage from "./pages/AdminPage";
 
 function App() {
   const [activeCategory, setActiveCategory] = useState("all")
+  const [badgeSearch, setBadgeSearch] = useState("");
   const [user, setUser] = useState(null)
 
   useEffect(() => {
@@ -32,13 +33,15 @@ function App() {
           path="/"
           element={
             <>
-              <FilterBar
+              <FilterOptions
                 activeCategory={activeCategory}
                 onCategoryChange={setActiveCategory}
+                setBadgeSearch={setBadgeSearch}
               />
               <BadgeGrid
                 user={user}
                 activeCategory={activeCategory}
+                badgeSearch={badgeSearch}
               />
             </>
           }

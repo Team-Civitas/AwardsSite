@@ -1,12 +1,21 @@
 import BadgeCard from "./BadgeCard"
 import badges from "../../data/badges.json"
 
-export default function BadgeGrid({ activeCategory, user }) {
+export default function BadgeGrid({ activeCategory, user, badgeSearch = "" }) {
 
   const visibleBadges = badges.filter(badge => {
-    if (activeCategory === "all") return true
-    return badge.category === activeCategory
-  })
+    const matchesCategory =
+      activeCategory === "all" || badge.category === activeCategory;
+
+    const search = badgeSearch.toLowerCase();
+
+    const matchesSearch =
+      badge.title.toLowerCase().includes(search) ||
+      badge.description?.toLowerCase().includes(search);
+
+
+    return matchesCategory && matchesSearch;
+  });
 
   return (
     <div className="badge-grid">
