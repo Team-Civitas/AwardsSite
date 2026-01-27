@@ -1,5 +1,5 @@
 :root {
-  font-family:'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -13,12 +13,25 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
 .page {
-  max-width: 1200px;
+  flex: 1;
   margin: 0 auto;
   padding: 0 24px;
+  width: 100%;
+  max-width: 1200px;
 
   display: flex;
   flex-direction: column;
   align-items: stretch;
+}
+
+footer {
+  margin-top: auto;
 }

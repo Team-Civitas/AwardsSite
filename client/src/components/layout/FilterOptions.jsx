@@ -26,6 +26,7 @@ export default function FilterOptions({ activeCategory, onCategoryChange, badgeS
                 placeholder="Sök på en badge..."
                 value={badgeSearch}
                 onChange={e => setBadgeSearch(e.target.value)}
+
             />
         </div>
     )
